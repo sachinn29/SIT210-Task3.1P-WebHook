@@ -28,7 +28,7 @@ void loop() {
 
   ThingSpeak.setField(1, ldrValue); // Set the value to send to Field 1
 
-  int httpCode = ThingSpeak.writeFields(12345, write_api_key); // Replace 12345 with your ThingSpeak channel number
+  int httpCode = ThingSpeak.writeFields(2250648, write_api_key); 
 
   if (httpCode == 200) {
     Serial.println("Data sent to ThingSpeak successfully.");
@@ -36,5 +36,5 @@ void loop() {
     Serial.println("Error sending data to ThingSpeak.");
   }
 
-  delay(30000); // Send data every 15 seconds
+  delay(30000); // Send data every 30 seconds
 }
